@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clipboard History</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h2>📋 Clipboard History</h2>
+      <div class="search-container">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search clipboard entries..."
+          autocomplete="off"
+        />
+        <button id="clearAllBtn" title="Clear All History">🗑️</button>
+      </div>
+    </header>
+    
+    <div id="historyList">
+      <div id="loadingMessage" class="loading">Loading...</div>
+    </div>
+    
+    <footer>
+      <div class="stats">
+        <span id="entryCount">0 entries</span>
+        <span class="separator">•</span>
+        <span class="tip">📌 Pinned items stay on top</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
